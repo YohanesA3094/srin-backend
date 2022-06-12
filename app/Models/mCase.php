@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class mCase extends Model
 {
     use HasFactory;
+
+    public function region()
+    {
+        return $this->hasOne(mRegion::class, 'city', 'city');
+    }
 }
